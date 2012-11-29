@@ -1,8 +1,7 @@
 <div class="works form"><?php echo $form->create('Work', array('method'=>'post','enctype'=>'multipart/form-data'));?>
-	<fieldset>
+	<fieldset class="related">
  		<legend><?php __('Edit Work');?></legend>
 	<?php
-	
 		echo $form->input('id');
 		echo $form->input('inventory_id', array('size'=>'5','type'=>'text','label'=>'Inventory ID (suggested)'));
 		echo $form->input('inventory_tag', array('size'=>'5','label'=>'Inventory Tag (eg. studio #)'));
