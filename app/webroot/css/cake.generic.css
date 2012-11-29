@@ -281,9 +281,9 @@ form {
 
 fieldset {
     border: 1px solid #ccc;
-    margin-top: 30px;
+    margin: 20px;
     padding: 10px 10px;
-    width: 480px;
+    width: 630px;
     float: left;
 }
 
