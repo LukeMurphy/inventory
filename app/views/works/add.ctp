@@ -6,7 +6,7 @@
 		echo $form->input('inventory_id', array('size'=>'5','type'=>'text','label'=>'Inventory ID (suggested)','value'=>($defaultInventoryId+1)));
 		echo $form->input('inventory_tag', array('size'=>'5','label'=>'Inventory Tag (eg. studio #)'));
 		echo "<br clear=all>";
-		echo $form->input('title');
+		echo $form->input('title',array('size'=>'60','maxlength'=>'65'));
 		//echo $form->input('date_year', array('type'=>'text','size'=>'5'));
 		e( $yearList->select('date_year', 'YEAR'));
 		echo $form->input('date_general', array('size'=>'5','label'=>'Month or Day (optional)'));

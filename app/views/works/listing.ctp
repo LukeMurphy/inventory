@@ -19,7 +19,11 @@
 			<th><?php echo $paginator->sort('width');?></th>
 			<th><?php echo $paginator->sort('consignment');?></th>
 			<th><?php echo $paginator->sort('status');?></th>
+			<?php 
+			/*
 			<th class="actions"><?php __('Actions');?></th>
+			*/
+			?>
 		</tr>
 		<?php
 		$i = 0;
@@ -46,8 +50,7 @@
 				if($image['Work']['id'] == $work['Work']['id'] && !$found) {
 					echo $html->link(
 					$html->image( $imagePath . $image['Image']['path'] . '_small.jpg', array("alt" => "")),
-					array('controller' => 'works', 'action' => 'view', $image['Work']['id']),
-					array('escape'=>false)
+					array('controller' => 'works', 'action' => 'view', $image['Work']['id']), array('escape'=>false)
 					);
 					$found=true;
 				}
@@ -66,7 +69,12 @@
 			</td>
 			<td><?php echo $work['Work']['status']; ?>
 			</td>
-			<td class="actions"><?php echo $html->link(__('View', true), array('action' => 'view', $work['Work']['id'])); ?>
+			<?php 
+			/*
+			 * 
+			 */
+			?>
+			<td class="actions"><?php echo $html->link(__('View', true), array('action' => 'edit', $work['Work']['id']));?>
 			</td>
 		</tr>
 		<?php endforeach; ?>

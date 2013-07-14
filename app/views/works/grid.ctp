@@ -1,9 +1,9 @@
 <div class="works index">
 <span style="font-weight:bold; color:red"><?php __('Works');?></span> | <?php 
 if(in_array("editor",$permissions)) echo $html->link(__('New Work', true), array('action' => 'add')); ?>
+| <a href="<?php echo $_SERVER['REQUEST_URI']."&list=true"; ?>">View as list</a>
 <p>
 <?php
-
 echo $paginator->counter(array(
 'format' => __('Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%', true)
 ));

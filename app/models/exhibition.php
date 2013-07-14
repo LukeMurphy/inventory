@@ -21,6 +21,5 @@ class Exhibition extends AppModel {
 			'insertQuery' => ''
 		)
 	);
-
 }
 ?>

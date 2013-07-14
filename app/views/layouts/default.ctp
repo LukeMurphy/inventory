@@ -55,7 +55,7 @@ echo $scripts_for_layout;
 				array('escape'=>false)
 				);
 				echo "<br/>";
-				//echo " | ";
+				echo "Gallery consigned: ";
 				echo $html->link('Olga Korper',
 				array('controller' => 'works', 'action' => 'find',"?q=olga-korper"),
 				array('escape'=>false)
@@ -87,7 +87,7 @@ echo $scripts_for_layout;
 				if(in_array("admin",$permissions)) {
 				}
 				*/
-				//echo " | ";
+				echo "Status / Location: ";
 				echo $html->link('Sold Works',
 				array('controller' => 'works', 'action' => 'find',"?q=sold"),
 				array('escape'=>false)
@@ -98,7 +98,7 @@ echo $scripts_for_layout;
 				array('escape'=>false)
 				);
 				echo " | ";
-				echo $html->link('In storage',
+				echo $html->link('In HFX storage',
 				array('controller' => 'works', 'action' => 'find',"?q=storage"),
 				array('escape'=>false)
 				);
@@ -107,7 +107,12 @@ echo $scripts_for_layout;
 				array('controller' => 'works', 'action' => 'find',"?loc=westies"),
 				array('escape'=>false)
 				);
-				echo " || ";
+				echo " | ";
+				echo $html->link('O-K',
+				array('controller' => 'works', 'action' => 'find',"?loc=olga"),
+				array('escape'=>false)
+				);
+				echo " | ";
 				echo $html->link('Pre 1990',
 				array('controller' => 'works', 'action' => 'find',"?ds=1960&de=1990"),
 				array('escape'=>false)

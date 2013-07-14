@@ -242,7 +242,11 @@ class WorksController extends AppController {
 		 }
 		 */
 		//$this->render('index');
-		$this->render('grid');
+		if(isset($_GET['list'])){
+			$this->render('listing');
+		} else {
+			$this->render('grid');
+		}
 	}
 
 	function view($id = null)

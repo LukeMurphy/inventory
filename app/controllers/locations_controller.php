@@ -89,16 +89,19 @@ class LocationsController extends AppController {
 	}
 
 	function delete($id = null) {
-		if($this->_User['User']['group'] == "editor"){
-			if (!$id) {
-				$this->Session->setFlash(__('Invalid id for Location', true));
-				$this->redirect(array('action'=>'index'));
-			}
+		
 			if ($this->Location->del($id)) {
 				$this->Session->setFlash(__('Location deleted', true));
 				$this->redirect(array('action'=>'index'));
 			}
+		/*
+		if($this->_User['User']['group'] == "editor"){
+			if ($id) {
+				$this->Session->setFlash(__('Invalid id for Location', true));
+				$this->redirect(array('action'=>'index'));
+			}
 		}
+			*/
 	}
 
 }
